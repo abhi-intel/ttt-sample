@@ -33,7 +33,7 @@ export default class Ttt extends Component {
 
 					{game_step != 'set_name' && 
 						<div>
-							<h2>Welcome, {app.settings.curr_user.name}</h2>
+							<h2>Welcome, <span className="player-color">{app.settings.curr_user.name}</span></h2>
 						</div>
 					}
 

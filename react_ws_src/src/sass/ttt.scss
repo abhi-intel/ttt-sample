@@ -105,18 +105,41 @@ section#TTT_game{
 
 		&.long {
 			width: 300px;
-		}	
+		}
+	}
+
+	#page-container {
+		.player-color {
+			color: #33A1C9;
+			text-transform: capitalize;
+		}
+
+		.opponent-color {
+			color: #CD853F;
+			text-transform: capitalize;
+		}
+
+		.btn-reset {
+			background-color: #A9A9A9;
+		}
+
+		.game-draw {
+			color: #D2042D;
+		}
 	}
 
 	#game_stat {
 		background: #eee;
 		margin: 10px;
-		width: 300px;
+		width: 390px;
 		height: 90px;
 		vertical-align: middle;
 		text-align: center;
-		padding-top: 10px;
 		font-family: $hdrFont;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
 
 		#game_stat_msg {
 			@include font-size(28px);
@@ -130,10 +153,10 @@ section#TTT_game{
 
 	#game_board {
 			// padding: 10px;
+			margin: 10px;
 
 		table {
 			background: #fff;
-			margin: 10px;
 		}
 
 		td {
@@ -143,23 +166,44 @@ section#TTT_game{
 			vertical-align: middle;
 			text-align: center;
 
-			&:hover{
-				background: #ff0;
+			&.win {
+				background: #7CFC00 !important;
 			}
 
-			&.win {
-				background: #f00;
+			&.empty, &.game-over {
+				background: #E8E8E8;
+			}
+
+			&.empty:hover {
+				background: #E0E0E0 !important;
+				cursor: pointer;
+			}
+
+			&.player {
+				color: #33A1C9;
+			}
+
+			&.comp {
+				color: #CD853F;
 			}
 		}
 
 		.vbrd {
-			border-left: 7px solid #000;
-			border-right: 7px solid #000;
+			border-left: 7px solid #787878;
+			border-right: 7px solid #787878;
 		}
 
 		.hbrd {
-			border-top: 7px solid #000;
-			border-bottom: 7px solid #000;
+			border-top: 7px solid #787878;
+			border-bottom: 7px solid #787878;
+		}
+
+		.btn-wrapper {
+			margin-left: 5px;
+		}
+
+		button {
+			margin: 5px;
 		}
 	}
 

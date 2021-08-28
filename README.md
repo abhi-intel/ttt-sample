@@ -1,4 +1,5 @@
 # A simple example of a full multiplayer game web app built with React.js and Node.js stack
+## Source: https://github.com/xims/X-ttt
 
 Major libraries used on front end:
 - react

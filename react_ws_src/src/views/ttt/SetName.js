@@ -18,7 +18,7 @@ export default class SetName extends Component {
 
 				<div ref='nameHolder' className='input_holder left'>
 					<label>Name </label>
-					<input ref='name' type='text' className='input name' placeholder='Name' />
+					<input ref='name' type='text' className='input name' placeholder='Write your name (optional)'/>
 				</div>
 
 
@@ -34,8 +34,12 @@ export default class SetName extends Component {
 		// const { name } = this.refs
 		// const { onSetName } = this.props
 		// onSetName(name.value.trim())
+		let name = this.refs.name.value.trim();
 
-		this.props.onSetName(this.refs.name.value.trim())
+		if (!name) {
+			name = 'Player';
+		}
+		this.props.onSetName(name)
 	}
 
 }
